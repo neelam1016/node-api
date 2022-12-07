@@ -2,7 +2,7 @@ const express = require('express');
 const PORT=8899;
 require('dotenv').config()
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://127.0.0.1/mongoapi').then(res=>console.log("Database connected : "+res)).catch(err=>console.log("database error : "+err));
+mongoose.connect('mongodb+srv://neelamgali:<password>@cluster0.vbsrf5j.mongodb.net/test').then(res=>console.log("Database connected : "+res)).catch(err=>console.log("database error : "+err));
 const app=express();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
